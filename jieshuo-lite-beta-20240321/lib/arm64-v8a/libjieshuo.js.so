@@ -1,0 +1,12 @@
+Java.perform(function() {
+    // Get a reference to the UserPreferenceFragment class
+    var UserPreferenceFragment = Java.use('com.nirenr.talkman.settings.ActionSetting$ActionPreferenceFragment');
+
+    // Hook the private method a()
+    UserPreferenceFragment.a.overload().implementation = function() {
+        console.log('a() method is hooked');
+           
+        // Always return true
+        return true;
+    };
+});
